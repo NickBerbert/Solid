@@ -14,5 +14,6 @@ A classe SistemaPagamento foi refatorada com base no princípio Open/Closed do S
 
 ## L
 
-## i
-
+## I
+### Relatório da letra "I"
+O código original violava o Princípio da Segregação de Interfaces ao forçar a classe Carro a implementar métodos como voar() e navegar(), que não se aplicam a ela. Isso tornava o código menos coeso e mais propenso a erros. Para corrigir, a interface Veiculo foi dividida em três interfaces menores: VeiculoTerrestre, VeiculoAereo e VeiculoAquatico. Cada classe agora implementa apenas a interface que corresponde à sua função: Carro implementa VeiculoTerrestre, Aviao implementa VeiculoAereo e Barco implementa VeiculoAquatico. Com isso, o código ficou mais limpo, modular e aderente ao SOLID, permitindo maior reutilização e manutenção futura com menor impacto nas classes existentes.
