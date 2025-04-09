@@ -13,6 +13,8 @@ Fiz sem utilizar uma main, pois acredito que dessa forma ficou bem explícito o 
 A classe SistemaPagamento foi refatorada com base no princípio Open/Closed do SOLID, que propõe que classes devem estar abertas para extensão, mas fechadas para modificação. No código original, utilizava-se uma estrutura if-else para tratar diferentes métodos de pagamento, o que tornava o sistema rígido e difícil de escalar. A solução foi criar a interface MetodoPagamento, que define um contrato único para todos os tipos de pagamento. A partir dela, foram criadas classes como PagamentoCartao, PagamentoPIX e PagamentoBoleto, cada uma com sua própria implementação. A classe SistemaPagamento passou então a receber objetos dessa interface, delegando a responsabilidade da execução do pagamento. Com isso, o código se tornou mais modular, extensível e fácil de manter, permitindo a adição de novos métodos de pagamento sem a necessidade de alterar o código existente.
 
 ## L
+### Relatório da letra "L"
+O código original violava o Princípio de Liskov ao sobrescrever o método sacar() na classe ContaPoupanca lançando uma exceção, o que quebra o comportamento esperado da superclasse ContaBancaria. Isso significa que ContaPoupanca não poderia ser usada de forma segura como substituta de ContaBancaria. Para corrigir, a herança foi removida e o código foi refatorado usando uma interface comum Conta, com apenas os métodos compartilhados (depositar e getSaldo). A classe ContaCorrente adiciona o comportamento de saque, enquanto ContaPoupanca mantém apenas os métodos relevantes. Com essa mudança, cada tipo de conta expõe apenas o que realmente oferece, garantindo substituição segura e aderência ao princípio L do SOLID.
 
 ## I
 ### Relatório da letra "I"
