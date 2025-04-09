@@ -1,3 +1,6 @@
+### Alunos: Eduardo Bolotari, Gabriel Fiori, Nicolas Berbert
+
+
 # Solid
 
 ## S
