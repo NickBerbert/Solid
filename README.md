@@ -10,7 +10,7 @@ Fiz sem utilizar uma main, pois acredito que dessa forma ficou bem explícito o 
 
 ## O
 ### Relatório da letra "O"
-A classe SistemaPagamento foi refatorada para seguir o princípio Open/Closed do SOLID. Antes, usava if-else para identificar o método de pagamento, o que exigia modificações sempre que um novo tipo fosse adicionado. Para resolver isso, criamos a interface MetodoPagamento e implementamos classes específicas como PagamentoCartao, PagamentoPIX e PagamentoBoleto. Com isso, a lógica de pagamento foi delegada a essas classes, e o sistema passou a permitir novas extensões sem alterar o código existente, tornando-se mais modular, limpo e de fácil manutenção.
+A classe SistemaPagamento foi refatorada com base no princípio Open/Closed do SOLID, que propõe que classes devem estar abertas para extensão, mas fechadas para modificação. No código original, utilizava-se uma estrutura if-else para tratar diferentes métodos de pagamento, o que tornava o sistema rígido e difícil de escalar. A solução foi criar a interface MetodoPagamento, que define um contrato único para todos os tipos de pagamento. A partir dela, foram criadas classes como PagamentoCartao, PagamentoPIX e PagamentoBoleto, cada uma com sua própria implementação. A classe SistemaPagamento passou então a receber objetos dessa interface, delegando a responsabilidade da execução do pagamento. Com isso, o código se tornou mais modular, extensível e fácil de manter, permitindo a adição de novos métodos de pagamento sem a necessidade de alterar o código existente.
 
 ## L
 
