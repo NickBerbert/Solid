@@ -9,6 +9,8 @@ A segunda função(GravadorEncomendasEmArquivo.java) só para guardar o arquivo,
 Fiz sem utilizar uma main, pois acredito que dessa forma ficou bem explícito o significado desse conceito do solid, em que classes possuem apenas uma função com o objetivo de ser mais fácil de testar e manter.
 
 ## O
+### Relatório da letra "O"
+A classe SistemaPagamento foi refatorada para seguir o princípio Open/Closed do SOLID. Antes, usava if-else para identificar o método de pagamento, o que exigia modificações sempre que um novo tipo fosse adicionado. Para resolver isso, criamos a interface MetodoPagamento e implementamos classes específicas como PagamentoCartao, PagamentoPIX e PagamentoBoleto. Com isso, a lógica de pagamento foi delegada a essas classes, e o sistema passou a permitir novas extensões sem alterar o código existente, tornando-se mais modular, limpo e de fácil manutenção.
 
 ## L
 
